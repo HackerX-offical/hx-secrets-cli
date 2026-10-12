@@ -11,7 +11,7 @@ hx-secrets scan ./repo --fail-on high
 hx-secrets grep ./config.env --json
 ```
 
-Use on **authorized** codebases (client repos, leak dumps, CI artifacts). MIT — HackerX
+Use on **authorized** codebases (client repos, leak dumps, CI artifacts).
 Official.
 
 ## License
