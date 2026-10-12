@@ -13,3 +13,8 @@ hx-secrets grep ./config.env --json
 
 Use on **authorized** codebases (client repos, leak dumps, CI artifacts). MIT — HackerX
 Official.
+
+## License
+
+Licensed under the [HackerX License](./LICENSE). Redistributions must retain copyright,
+license text, and [NOTICE](./NOTICE) attribution per the license terms.
