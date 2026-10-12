@@ -1,8 +1,9 @@
 import { readFileSync, statSync } from 'node:fs';
 import fg from 'fast-glob';
-import { Match, scanContent } from './detectors.js';
+import { scanContent } from '../engine/scan-content.js';
+import type { Match } from '../detectors/types.js';
 
-const SKIP_DIRS = ['node_modules', '.git', 'dist', 'coverage', '.next'];
+const SKIP_DIRS = ['node_modules', '.git', 'dist', 'coverage', '.next', 'vendor'];
 const MAX_FILE = 2 * 1024 * 1024;
 
 export interface ScanReport {
@@ -33,7 +34,7 @@ export async function scanDirectory(root: string): Promise<ScanReport> {
         matches.push({ ...m, file });
       }
     } catch {
-      // binary or unreadable
+      /* binary */
     }
   }
 

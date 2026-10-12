@@ -1,4 +1,11 @@
-import { scanContent } from '../src/detectors.js';
+import { scanContent } from '../src/engine/scan-content.js';
+import { DETECTORS } from '../src/detectors/registry.js';
+
+describe('detector registry', () => {
+  it('loads many detectors', () => {
+    expect(DETECTORS.length).toBeGreaterThan(35);
+  });
+});
 
 describe('scanContent', () => {
   it('finds github pat', () => {
