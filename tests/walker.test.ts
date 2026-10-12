@@ -10,8 +10,8 @@ describe('scanDirectory', () => {
 
     const report = await scanDirectory(root);
     expect(report.filesScanned).toBe(1);
-    expect(report.matches.some((m) => m.ruleId === 'github-pat' && m.file.endsWith('keys.txt'))).toBe(
-      true,
-    );
+    expect(
+      report.matches.some((m) => m.ruleId === 'github-pat' && m.file.endsWith('keys.txt')),
+    ).toBe(true);
   });
 });
