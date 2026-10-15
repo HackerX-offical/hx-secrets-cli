@@ -21,7 +21,7 @@ you are authorized to scan.
 ## Install
 
 ```bash
-git clone https://github.com/HackerX-offical/hx-secrets-cli.git
+git clone https://github.com/HackerX-official/hx-secrets-cli.git
 cd hx-secrets-cli
 npm install
 npm run build
